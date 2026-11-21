@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Bulwark
+GenericName=Controller configuration
+Comment=Configure G7-family game controllers (GameSir G7 Pro compatible)
+Exec=bulwark
+Icon=bulwark
+Terminal=false
+Categories=Settings;HardwareSettings;Game;
+Keywords=gamesir;g7;controller;gamepad;xbox;

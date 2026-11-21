@@ -1,0 +1,2 @@
+# Nexus read seen statically: 04 20 01 F7 01 = one byte of the light region (0x20) at 0x1F7
+04 20 01 F7 01

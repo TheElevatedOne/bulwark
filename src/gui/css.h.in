@@ -1,0 +1,3 @@
+// Generated from data/bulwark.css by CMake. Do not edit.
+#pragma once
+static const char* const kStylesheet = R"BWCSS(@BULWARK_CSS@)BWCSS";

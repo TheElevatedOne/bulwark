@@ -1,0 +1,9 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: bulwark
+Description: Configuration library for GameSir G7-family controllers
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lbulwark
+Cflags: -I${includedir}

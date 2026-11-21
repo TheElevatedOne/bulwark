@@ -1,0 +1,6 @@
+BULWARK_0.1 {
+    global:
+        bw_*;
+    local:
+        *;
+};

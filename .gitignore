@@ -1,0 +1,13 @@
+# Vendor packages and anything extracted from them (never commit GameSir code, firmware or artwork)
+*.Msixbundle
+*.Emsixbundle
+*.msix
+*.appx
+*.ufw
+extracted/
+build/
+# Screenshots of the vendor app kept in the project root as UI reference (GameSir's artwork: never commit)
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp

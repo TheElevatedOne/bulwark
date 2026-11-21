@@ -1,0 +1,219 @@
+/* Bulwark GTK4 stylesheet.
+ * Layout follows the original vendor app's structure (brand + centred profile tabs in the header, centred page
+ * tabs, a dashboard of cards, a footer with actions and version). Every colour comes from the active GTK theme's
+ * named colours; corners are square and no background is transparent. */
+
+window.bw {
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+window.bw * {
+    border-radius: 0;
+}
+
+/* ---- header ---- */
+.bw-header {
+    background-color: @theme_base_color;
+    padding: 8px 16px 0 16px;
+}
+.bw-brand {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+.bw-device {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: @insensitive_fg_color;
+    margin-bottom: 6px;
+}
+.bw-badge {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* profile tabs, centred in the header */
+.bw-ptabs .bw-slot {
+    background-color: @theme_base_color;
+    background-image: none;
+    border: none;
+    border-bottom: 3px solid @theme_base_color;
+    border-top: 3px solid @theme_base_color;
+    box-shadow: none;
+    padding: 8px 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: @insensitive_fg_color;
+}
+.bw-ptabs .bw-slot:hover {
+    background-color: @theme_base_color;
+    background-image: none;
+    color: @theme_fg_color;
+}
+.bw-ptabs .bw-slot:checked {
+    background-color: @theme_bg_color;
+    background-image: none;
+    color: @theme_fg_color;
+    border-bottom: 3px solid @theme_selected_bg_color;
+}
+.bw-ptabs .bw-slot.bw-active-slot {
+    border-top: 3px solid @theme_selected_bg_color;
+}
+
+/* page tabs */
+.bw-navrow {
+    background-color: @theme_base_color;
+    border-bottom: 1px solid @borders;
+}
+.bw-tab, .bw-tab:hover, .bw-tab:checked {
+    background-color: @theme_base_color;
+    background-image: none;
+}
+.bw-tab {
+    border: none;
+    border-bottom: 3px solid @theme_base_color;
+    box-shadow: none;
+    padding: 6px 16px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: @insensitive_fg_color;
+}
+.bw-tab:hover {
+    color: @theme_fg_color;
+}
+.bw-tab:checked {
+    color: @theme_fg_color;
+    border-bottom: 3px solid @theme_selected_bg_color;
+}
+
+.bw-banner {
+    background-color: @theme_base_color;
+    border-bottom: 1px solid @borders;
+    border-left: 4px solid @theme_selected_bg_color;
+    padding: 6px 12px;
+}
+
+/* settings whose bytes are not known yet (pages.cpp notYet): visibly out of use */
+.bw-notyet {
+    opacity: 0.4;
+}
+
+/* ---- pages and cards ---- */
+.bw-page {
+    padding: 16px;
+}
+.bw-section {
+    background-color: @theme_base_color;
+    border: 1px solid @borders;
+}
+.bw-section-title {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 12px 12px 4px 12px;
+    padding-left: 8px;
+    border-left: 3px solid @theme_selected_bg_color;
+}
+/* card header with a glyph instead of the accent bar */
+.bw-section-head {
+    margin: 12px 12px 4px 12px;
+}
+.bw-section-label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.bw-glyph, .bw-range {
+    color: @accent_color;
+}
+.bw-range {
+    min-height: 26px;
+}
+.bw-section-body {
+    padding: 6px 14px 14px 14px;
+}
+.bw-subtitle {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: @insensitive_fg_color;
+    margin-top: 6px;
+}
+.bw-model {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+}
+.bw-art {
+    color: @theme_fg_color;
+    margin-top: 6px;
+}
+.bw-row {
+    min-height: 34px;
+}
+.bw-key {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: @insensitive_fg_color;
+}
+.bw-note {
+    color: @insensitive_fg_color;
+    font-size: 12px;
+}
+
+/* segmented choices and side switchers */
+.bw-seg button, .bw-tabs button {
+    padding: 6px 14px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.bw-seg button:checked, .bw-tabs button:checked {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+.bw-curve, .bw-stick {
+    background-color: @theme_bg_color;
+    border: 1px solid @borders;
+}
+
+/* ---- button test ---- */
+.bw-lamp {
+    padding: 6px 10px;
+    min-width: 44px;
+    border: 1px solid @borders;
+    background-color: @theme_bg_color;
+}
+.bw-lamp-on {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+/* ---- footer ---- */
+.bw-footer {
+    background-color: @theme_base_color;
+    border-top: 1px solid @borders;
+    padding: 6px 14px;
+}
+.bw-status {
+    font-size: 12px;
+}
+.bw-version {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: @insensitive_fg_color;
+    margin-left: 10px;
+}
+.bw-apply:not(:disabled) {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+.bw-error {
+    color: @error_color;
+}

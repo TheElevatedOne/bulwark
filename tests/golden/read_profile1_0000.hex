@@ -1,0 +1,2 @@
+# Request seen from Nexus and sent from Linux 2026-11-20: GIP 0x0F, opt 00, seq 3, len 5: read region 1, addr 0, 0x37 bytes
+0F 00 03 05 04 01 00 00 37

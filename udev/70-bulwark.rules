@@ -1,0 +1,6 @@
+# GameSir G7-family controllers: let the logged-in user open the USB device (GIP modes: bulwark
+# detaches xone/xpad while configuring) and the hidraw nodes (HID modes, e.g. PID 0x1022, where the
+# vendor collection 0xFFF0 carries output report 0x0F), without root.
+#   sudo cp 70-bulwark.rules /etc/udev/rules.d/ && sudo udevadm control --reload && sudo udevadm trigger
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="3537", TAG+="uaccess"
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="3537", TAG+="uaccess"

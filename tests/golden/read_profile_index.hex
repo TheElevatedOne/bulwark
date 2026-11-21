@@ -1,0 +1,2 @@
+# GIP 0x0F, options 00, seq 1, len 1, payload 0B (read current profile index)
+0F 00 01 01 0B
